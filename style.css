@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    line-height: 1.2;
+}
+
+:root {
+    --basc-color: white;
+    --main-color: rgb(103, 75, 177);
+    --hover-color: rgb(233, 128, 231);
+    /* The image used */
+    background-image: url(images/bg-desktop.svg);
+    /* Used if the image is unavailable */
+    background-color: var(--main-color);
+    /* You must set a specified height */
+    height: 100%;
+    /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Center the image */
+    background-position: center;
+    /* Resize the background image to cover the entire container */
+    background-size: cover;
+    /* clear:both; what do you use  */
+    position: relative;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*small*/
+@media (min-width: 577px) {
+    .container {
+        width: 550px;
+    }
+}
+
+/* tablet */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* desktop  */
+@media (min-width: 1300px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.logo {
+    background-image: url(images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 50px;
+    margin-top: 2.5rem;
+}
+
+.img-and-text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2.75rem;
+    padding-top: 6rem;
+}
+
+img {
+    width: 60%;
+    height: 55%;
+}
+
+.text {
+    color: var(--basc-color);
+    line-height: 1.8;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 2rem;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1.25rem 0;
+}
+
+button {
+    color: var(--main-color);
+    background-color: var(--basc-color);
+    border: none;
+    border-radius: 40px;
+    text-transform: capitalize;
+    font-family: 'Poppins';
+    font-size: 16px;
+    width: 174px;
+    height: 50px;
+    box-shadow: 0 5px 8px 1px rgb(61 44 105);
+    cursor: pointer;
+}
+
+
+
+button:hover {
+    background-color: var(--hover-color);
+    color: var(--basc-color);
+}
+
+.attr-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: inherit;
+    bottom: 50px;
+}
+
+.icon {
+    white-space: nowrap;
+}
+
+.Facebook_icon::after,
+.Twitter_icon::after,
+.Instagram_icon::after {
+    font-family: "Font Awesome 5 Brands";
+    font-style: normal;
+    color: var(--basc-color);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid var(--basc-color);
+    padding: 10px;
+    margin: auto 10px;
+}
+
+.Facebook_icon::after {
+    content: "\f39e";
+}
+
+.Twitter_icon::after {
+    content: "\f099";
+}
+
+.Instagram_icon::after {
+    content: "\f16d";
+}
+
+.Facebook_icon:hover::after,
+.Twitter_icon:hover::after,
+.Instagram_icon:hover::after {
+    color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+
+/*! start Attribution */
+.attribution {
+    color: var(--basc-color);
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    /* margin: auto; */
+    /* width: 46%; */
+}
+
+
+.attribution a {
+    font-size: smaller;
+    text-decoration: none;
+    color: var(--hover-color);
+    text-transform: capitalize;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.attribution a:hover::after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    content: "\f0a9";
+    font-size: 14px;
+    padding: 0 8px;
+    color: var(--basc-color);
+}
+
+
+/*! end Attribution */
+
+/* Screen For tablet */
+@media (max-width:769px) {
+    :root {
+        background-image: url(images/bg-mobile.svg);
+    }
+
+    .img-and-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 90%;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .attr-icon {
+        position: relative;
+        top: 90px;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .attribution {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+}
