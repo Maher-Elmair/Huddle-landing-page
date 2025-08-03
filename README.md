@@ -71,5 +71,3 @@ Huddle-landing-page/
 - 💡 Project based on the provided design challenge from the platform
 
 ---
-
-هل تحب أعملك كمان ملف README لمشروع "Single Price Grid Component" بنفس الشكل؟
